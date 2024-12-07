@@ -19,3 +19,25 @@ nav ul li {
     display: inline;
     margin-right: 20px;
 }
+
+h4 {
+    color: #242424;
+}
+
+/* cart.html styling */
+.cart-summary {
+    margin-top: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    padding: 10px;
+    border: #222 solid 2px;
+    border-radius: 10px;
+}
+
+.shipping-info {
+    margin: 5%;
+    padding: 10px;
+    border: #222 solid 2px;
+    border-radius: 10px;
+}
