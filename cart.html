@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">                                                                                
 </head>
-<body>
+<body onload="load_cart()">
     <!--Navbar-->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="index.html">Generic Shoe</a>
@@ -50,7 +50,26 @@
         <div class="shipping-info">
             <h4>Shipping Info</h4>
             <form>
-                
+                <label for="email">Email</label>
+                <br>
+                <input type="email" name="email" id="email">
+                <br>
+                <label for="address">Address</label>
+                <br>
+                <input type="text" name="address" id="address">
+                <br>
+                <div class="row">
+                    <div class="column">
+                        <label for="zipcode">Zip Code</label>
+                        <br>
+                        <input type="text" name="zipcode" id="zipcode">
+                    </div>
+                    <div class="column">
+                        <label for="state">State</label>
+                        <br>
+                        <input type="text" name="state" id="state">
+                    </div>
+                  </div> 
             </form>
         </div>
     </main>
