@@ -38,7 +38,7 @@ h4 {
 
 /* cart.html styling */
 .cart-summary {
-    margin-top: 70px;
+    margin-top: 80px;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
@@ -56,6 +56,7 @@ h4 {
 
 label {
     margin-left: 2%;
+    margin-bottom: 2%;
 }
 
 input {
@@ -67,15 +68,28 @@ input {
     width: 96%;
 }
 
+button {
+    margin-top: 2%;
+}
+
+.cart-items p {
+    margin: 1%;
+}
+
+.total {
+    margin-top: 4%;
+}   
+
 .zipcode {
     width: 10%;
 }
 
-.row {
+.form-row {
     display: flex;
     margin: 2%;
 }
 
-.column {
+.form-column {
     flex: 50%;
 }
+

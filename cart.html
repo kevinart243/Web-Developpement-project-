@@ -39,45 +39,45 @@
 
     <!-- Main -->
     <main>
-        <div class="cart-summary">
-            <div id="cart-items" class="cart-items">
-                <p>Black Shoe ($20)</p>
-                <p>Red Shoe</p>
-                <p>Green Shoe</p>
+        <div class="desktop-cart-row">
+            <div class="cart-summary desktop-cart-col">
+                <div id="cart-items" class="cart-items cart-col"></div>
+                <hr>
+                <h4 class="total">Total <span id="total" style="float:right"></span></h4>
             </div>
-            <h4 class="total">Total <span id="total"></span></h4>
-        </div>
-        <div class="shipping-info">
-            <h4>Shipping Info</h4>
-            <form>
-                <label for="email">Email</label>
-                <br>
-                <input type="email" name="email" id="email">
-                <br>
-                <label for="address">Address</label>
-                <br>
-                <input type="text" name="address" id="address">
-                <br>
-                <div class="row">
-                    <div class="column">
-                        <label for="zipcode">Zip Code</label>
-                        <br>
-                        <input type="text" name="zipcode" id="zipcode">
+            <div class="shipping-info desktop-cart-col">
+                <h4>Shipping Info</h4>
+                <form>
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" name="email" id="email">
+                    <br>
+                    <label for="address">Address</label>
+                    <br>
+                    <input type="text" name="address" id="address">
+                    <br>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <label for="zipcode">Zip Code</label>
+                            <br>
+                            <input type="text" name="zipcode" id="zipcode">
+                        </div>
+                        <div class="form-column">
+                            <label for="state">State</label>
+                            <br>
+                            <input type="text" name="state" id="state">
+                        </div>
                     </div>
-                    <div class="column">
-                        <label for="state">State</label>
-                        <br>
-                        <input type="text" name="state" id="state">
-                    </div>
-                  </div> 
-            </form>
+                    <input type="button" value="Checkout" onclick="checkout()">
+                </form>
+            </div>
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="jumbotron-fluid text-center bg-dark p-5">
         <div class="container taxt-white">
-            <p>&copy; Copyright 2024. All Rights Reserved .</p>
+            <p>&copy; Copyright 2024. All Rights Reserved.</p>
             <p>
                 <a href="mailto:generic@shoe.net" class="text- white">generic@shoe.net</a>
             </p>
