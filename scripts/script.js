@@ -5,6 +5,7 @@ add_to_cart("Red Shoe", 39.99);
 
 function add_to_cart(name, price) {
     cart.push({"name": name, "price": price});
+    update_cart_count();
 }
 
 function remove_from_cart(name) {
@@ -13,6 +14,7 @@ function remove_from_cart(name) {
         if (element.name === name) { cart.splice(index, 1); }
     }
     load_cart();
+    update_cart_count();
 }
 
 function load_cart() {
@@ -31,9 +33,11 @@ function checkout() {
     else { window.location.href = "index.html" }
 }
 
-counter = document.getElementById("cart-count");
-if (counter != null) {
-    counter.innerText = cart.length;
+function update_cart_count() {
+    counter = document.getElementById("cart-count");
+    if (counter != null) {
+        counter.innerText = cart.length;
+    }
 }
 
 // Open the modal with the clicked image
