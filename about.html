@@ -50,7 +50,7 @@
             <div id="about-intro">
                 <h1 id="about-title">Generic Shoe</h1>
                 <p>Welcome to Generic Shoe, your ultimate destination for premium shoes. Whether you're a sneakerhead, a casual collector, or just looking for your next pair of stylish kicks, we've got you covered. Our curated selection features the latest releases from top brands like Nike, Adidas, Jordan, and Puma, alongside exclusive collaborations and limited-edition designs. At Generic Shoe, we offer something for everyone—from high-performance athletic sneakers to fashion-forward streetwear styles. With exceptional customer service and a commitment to quality, we strive to provide an unparalleled shopping experience for shoe lovers of all kinds. Visit us today and step into your new favorite pair!</p>
-                <h4><a href="shoes.html" id="about-shoe-link">Browse our selection online!</a></h4>
+                <h4><a href="shoes.html" id="about-shoe-link">Browse our selection!</a></h4>
             </div>
 
             <div id="about-map">
@@ -61,8 +61,21 @@
             <div id="about-form">
                 <h3>Sign Up For Our Newsletter</h3>
                 <form id="about-form-element">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="email" placeholder="John Doe">
+
                     <label for="email">E-Mail</label>
-                    <input type="text" id="email" name="email" placeholder="john@gmail.com">
+                    <input type="text" id="email" name="name" placeholder="johndoe@gmail.com">
+
+                    <label for="email">What info would you like to recieve?</label>
+                    <div id="about-radio">
+                        <label for="News">News</label>
+                        <input type="checkbox" id="News" name="news_opt" value="News">
+                        <label for="Promotions">Promos</label>
+                        <input type="checkbox" id="Promotions" name="promo_opt" value="Promotions">
+                        <label for="Sales">Sales</label>
+                        <input type="checkbox" id="Sales" name="sales_opt" value="Sales">
+                    </div>
                 
                     <label for="discovery">How did you hear about us?</label>
                     <select id="discovery" name="discovery">

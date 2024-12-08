@@ -243,7 +243,7 @@ section#featured-products {
 
 #about-form-element {
     display: inline-block;
-    margin: 80px 100px;
+    margin: 0 50px;
 }
 
 #about-form input[type="text"],
@@ -271,6 +271,7 @@ section#featured-products {
     background-color: #555;
 }
 
+/*Tablet Viewport*/
 @media (max-width: 768px) {
     section#featured-products {
         grid-template-columns: repeat(2, 1fr);
@@ -287,6 +288,7 @@ section#featured-products {
     
 }
 
+/*Mobile Viewport*/
 @media (max-width: 480px) {
     section#featured-products {
         grid-template-columns: 1fr;
