@@ -20,6 +20,12 @@ nav ul li {
     margin-right: 20px;
 }
 
+footer {
+    display: fixed;
+    left: 0;
+    bottom: 0;
+}
+
 section#featured-products {
     display: grid;
     grid-template-columns: auto auto auto auto;
