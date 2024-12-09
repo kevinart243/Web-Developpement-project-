@@ -1,72 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Generic Shoe Brand</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/styles.css">                                                                                
-    </head>
-    <body>
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="index.html">Generic Shoe</a>
-    
-            <!-- Hamburger menu icon -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="shoes.html">Shoes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cart.html">Checkout (<span id="cart-count"></span>)</a>
-                    </li>
-                </ul>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<style>
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(rgba(110, 110, 110, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://img.freepik.com/free-vector/matrix-style-binary-code-digital-falling-numbers-blue-background_1017-37387.jpg?semt=ais_hybrid');
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Project Section */
+.project {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.project:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.project a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 8px 0;
+}
+
+ul li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2, h3 {
+        font-size: 1.8rem;
+    }
+
+    .project {
+        padding: 15px;
+    }
+
+    .project h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Contact Section */
+    #contact {
+        background-color: #f7f7f7;
+        padding: 40px 20px;
+        border-radius: 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 40px auto;
+        text-align: center;
+    }
+
+    #contact h2 {
+        font-size: 2rem; 
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    #contact p {
+        font-size: 1.1rem; 
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    /* Form Styles */
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    label {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    input, textarea {
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 1rem; /* Corrected from open comment */
+    }
+
+    input:focus, textarea:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button {
+        padding: 12px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Form validation feedback */
+    input:invalid, textarea:invalid {
+        border-color: #e74c3c;
+    }
+
+    button:disabled {
+        background-color: #aaa;
+        cursor: not-allowed;
+    }
+}
+
+
+</style>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="shoes.html">Back to shoes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
+    </header>
 
-        <!-- Main -->
-        <main>
-            <p>Hello my name is John Lopez, born in Florida, moved to Utah in 2016. I'm a computer science student at Southern Utah University, I love technology, programming and problem solving.
-                Since 6 years old I've been loving computers and how they work, currently I'm persuing my dream as a computer scince.
-            </p>
-            <p>My goal is to become an Web Developer, Front and Back end as my priority.</p>
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hello my name is John Lopez, I'm a Software Developer.</p>
+    </section>
 
-            <p>I have stong fundamentals in java, programming & problem solving, started my programming carrer in Southwest Technical College in 2019, I graduate as a Software Developer in 2020. </p>
-            <p>I enjoy play and talk about soccer in my free time, I also love playing videogames as a hobby.</p>
-        </main>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>born in Florida, moved to Utah in 2016. I love technology, programming and problem solving.
+            Since 6 years old I've been loving computers and how they work, currently I'm persuing my dream as a computer science. 
+            My goal is to become an Web Developer, Front and Back end as my priority.
+            I enjoy play and talk about soccer in my free time, I also love playing videogames as a hobby.</p>
+    </section>
 
-        <!-- Footer -->
-        <footer class="jumbotron-fluid text-center bg-dark p-5">
-            <div class="container text-white">
-                <p>&copy; Copyright 2024. All Rights Reserved.</p>
-                <p>
-                    <a href="mailto:generic@shoe.net" class="text-white">generic@shoe.net</a>
-                </p>
-                <p><a href="john.html" class="text-white">By John Lopez</a></p>
-                <a href="https://www.facebook.com/genericshoe" target="_blank"><img src="images/fb_icon.png"
-                    alt="black and white Facebook logo" class="pr-4" /></a>
-                <a href="https://twitter.com/genericshoe" target="_blank"><img src="images/twitter_icon.png"
-                        alt="black and white Twitter logo" /></a>
+    <section id="projects">
+        <h2>Education</h2>
+        <div class="project">
+            <h3>Southwest Technical College</h3>
+            <p>started my programming carrer in Southwest Technical College in 2019, I graduate as a Software Developer in 2020.</p>
+        </div>
+        <div class="project">
+            <h3>Southern Utah University</h3>
+            <p>I'm currently studying computer science at Southern Utah University, I started my path at Southern Utah University in 2022.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to fill out the form below. I'd love to hear from you!</p>
+    
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
             </div>
-        </footer>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="scripts/script.js"></script>
-    </body>
-    </html>
+    
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email">
+            </div>
+    
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Your Message" rows="6"></textarea>
+            </div>
+    
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; Copyright 2024 John Lopez. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
