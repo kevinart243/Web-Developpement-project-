@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <style>
+
         .cart-summary {
             margin-top: 80px;
             margin-left: 5%;
@@ -55,10 +56,6 @@
             margin: 1%;
         }
 
-        .total {
-            margin-top: 4%;
-        }
-
         .zipcode {
             width: 10%;
         }
@@ -70,6 +67,31 @@
 
         .form-column {
             flex: 50%;
+        }
+
+        @media screen and (min-width: 768px) {
+            .desktop-cart-row {
+                display: flex;
+                align-items: center;
+            }
+
+            .desktop-cart-column {
+                flex: 50%;
+                flex-direction: column;
+            }
+
+            .cart-summary {
+                min-width: 50%;
+                max-width: fit-content;
+                margin: 2%;
+                margin-top: 8%;
+            }
+
+            .shipping-info {
+                min-width: 20%;
+                margin: 2%;
+                margin-top: 8%;
+            }
         }
     </style>                                                                               
 </head>

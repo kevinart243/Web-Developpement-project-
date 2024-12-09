@@ -14,33 +14,80 @@
         <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/styles.css">                                                                                
+        <link rel="stylesheet" href="css/styles.css">
+        <style>
+            main {
+                margin-top: 30%;
+            }
+            
+            .portrait {
+                min-width: 20px;
+            }
+
+            h2 {
+                color: grey;
+            }
+
+            p {
+                font-size: 1.25em;
+            }
+
+            @media screen and (min-width: 768px) {
+                main {
+                    margin-top: 10%;
+                }
+
+                .portrait {
+                    max-width: 20%;
+                }
+
+                .row {
+                    display: flex;
+                    margin: 2%;
+                }
+
+                .column {
+                    flex: 50%;
+                    flex-direction: column;
+                }
+            }
+
+            @media screen and (min-width: 992px) {
+                main {
+                    margin-top: 0;
+                }
+            }
+        </style>                                                                       
     </head>
     <body>
         <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
             <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="Generic Shoe Logo" width="40"
-                    height="40" class="d-inline-block align-top rounded-lg"><span class=" ml-1 align-middle">Generic
-                    Shoe
-                    Brand</span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                height="40" class="d-inline-block align-top rounded-lg"><span class=" ml-1 align-middle">Generic
+                Shoe
+                Brand</span></a>
+            <!-- Hamburger menu icon -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
     
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="kevin.html">Portfolio</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="cart.html">Cart</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shoes.html">Shoes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Checkout (<span id="cart-count"></span>)</a>
                     </li>
                 </ul>
-    
             </div>
         </nav>
 
@@ -49,6 +96,21 @@
             <div class="jumbotron">
                 <h1>Aiden Carroll</h1>
                 <h4>Software Developer</h4>
+            </div>
+            <div class="row">
+                <img src="images/aiden.jpg" alt="A picture of Aiden Carroll" class="portrait column"s>
+                <div class="column" style="margin: 2%;">
+                    <h2>About Me</h2>
+                    <p>I am a 20 year old student at SUU studying Computer Science and Applied Math. I like to mountain bike, write and play music, and play any type of games. I grew up in Herriman, UT and currently live in Cedar City, UT.</p>
+                </div>
+            </div>
+            <div style="margin: 2%; align-content: center;">
+                <h2>My Work</h2>
+                <p>I Have completed multiple courses in calculus and linear algebra, as well as a variety of computer science classes in various topics. I have completed multiple computer science projects that demonstrate a wide variety of of content. I also have a background in some audio engineering and related technologies.</p>
+            </div>
+            <div style="margin: 2%; align-content: center; margin-bottom: 30px;">
+                <h2>My Plans</h2>
+                <p>After I graduate, I plan on going into the field and work as a computer scientist hopefully in the microcomputing, graphics, or audio fields. Alternatively I might go to additional school to become a computational physicist. I plan on moving out of Utah and living somewhere in the north or midwest.</p>
             </div>
         </main>
 
