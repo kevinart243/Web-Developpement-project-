@@ -61,6 +61,7 @@ footer {
   to {
     transform: translateX(0);
   }
+}
   
   @keyframes rotateIn {
   0% {
@@ -231,6 +232,8 @@ footer {
 
 #about-form input[type="submit"]:hover {
     background-color: #555;
+}
+}
 }
 
 /*Tablet Viewport*/
