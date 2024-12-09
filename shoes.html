@@ -16,9 +16,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Quicksand:wght@300..700&display=swap"
             rel="stylesheet">
     </head>
+    
     <style>
-        
-
 section#featured-products {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -161,6 +160,75 @@ section#featured-products {
 .size-btn.selected {
     background-color: #555;
     transform: scale(1.15);
+}
+/*Tablet Viewport*/
+@media (max-width: 768px) {
+    section#featured-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tablet-desktop {
+        display: block;
+    }
+
+    #about-map-element {
+        height: 300px;
+        width: 300px;
+    }
+
+}
+
+/*Mobile Viewport*/
+@media (max-width: 480px) {
+    section#featured-products {
+        grid-template-columns: 1fr;
+    }
+
+    .tablet-desktop {
+        display: none;
+    }
+
+    #about-container {
+        max-width: 1200px;
+        margin: 5px, 5px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 10px;
+        text-align: center;
+    }
+
+    #about-container h3 {
+        font-size: 3em;
+        padding: none;
+    }
+
+    #about-intro {
+        grid-column: 1;
+        grid-row: 1;
+        padding-top: 10px;
+        border: none;
+    }
+
+    #about-map {
+        grid-column: 1;
+        grid-row: 2;
+        border: none;
+    }
+
+
+
+    #about-form {
+        grid-column: 1;
+        grid-row: 3;
+        border: none;
+    }
+
+    #about-form-element {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
 }
 
     </style>
