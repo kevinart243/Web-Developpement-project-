@@ -149,6 +149,102 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
+<style>/* Set the font family for the entire body */
+    body {
+      font-family: "QuickSand", serif;
+      overflow-x: hidden;
+    }
+    
+    p {
+      font-size: 0.9em;
+    }
+    #hero {
+      background-image: url("../img/pattern.jpg");
+    }
+    
+    #map {
+      width: 400px;
+    }
+    @keyframes coloring {
+      from {
+        color: lawngreen;
+      }
+      to {
+        color: rgb(24, 24, 24);
+      }
+    }
+    
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+    /* Animations */
+    
+    /* Fade in the H1 header: Find the Store  */
+    .coloring {
+      animation: coloring 3s ease-in-out;
+    }
+    
+    /* Slide in the navbar */
+    .slide-in {
+      animation: slideIn 1s ease-out;
+    }
+    
+    @keyframes rotateIn {
+      0% {
+        transform: rotate(-200deg);
+        opacity: 0;
+        width: 25%;
+      }
+      100% {
+        transform: rotate(0deg);
+        opacity: 1;
+        width: 90%;
+      }
+    }
+    
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+        width: 25%;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+        width: 100%;
+      }
+    }
+    
+    .rotate-in {
+      animation: rotateIn 5s ease-in-out;
+    }
+    
+    .slide-up {
+      animation: slideUp 5s ease-in-out;
+    }
+    @media screen and (min-width: 768px) {
+      p {
+        font-size: 1.1em;
+      }
+      #map {
+        width: 800px;
+      }
+    }
+    
+    @media screen and (min-width: 992px) {
+      p {
+        font-size: 1.25em;
+      }
+      #map {
+        width: 800px;
+      }
+    }
+    </style>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         document.querySelector("#kin").classList.add("rotate-in");
