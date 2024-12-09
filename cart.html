@@ -5,7 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generic Shoe Brand</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">                                                                                
+    <style>
+        .cart-summary {
+            margin-top: 80px;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 5%;
+            padding: 10px;
+            border: #222 solid 2px;
+            border-radius: 10px;
+        }
+
+        .shipping-info {
+            margin: 5%;
+            padding: 10px;
+            border: #222 solid 2px;
+            border-radius: 10px;
+        }
+
+        label {
+            margin-left: 2%;
+            margin-bottom: 2%;
+        }
+
+        input {
+            border: #000 solid 1px;
+            border-radius: 3px;
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-bottom: 5%;
+            width: 96%;
+        }
+
+        button {
+            margin-top: 2%;
+        }
+
+        .cart-items p {
+            margin: 1%;
+        }
+
+        .total {
+            margin-top: 4%;
+        }
+
+        .zipcode {
+            width: 10%;
+        }
+
+        .form-row {
+            display: flex;
+            margin: 2%;
+        }
+
+        .form-column {
+            flex: 50%;
+        }
+    </style>                                                                               
 </head>
 <body onload="load_cart(); update_cart_count()">
     <!--Navbar-->
