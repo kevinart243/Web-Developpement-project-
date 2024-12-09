@@ -1,483 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Generic Shoe Brand</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/styles.css">                                                                                
+    </head>
+    <body onload="update_cart_count()">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="index.html">Generic Shoe</a>
+    
+            <!-- Hamburger menu icon -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shoes.html">Shoes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Checkout (<span id="cart-count"></span>)</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generic Shoe Brand-Products</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/img/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Quicksand:wght@300..700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+        <!-- Main -->
+        <main>
+            <section id="featured-products">
+                <div class="product">
+                    <img src="images/shoes1.jpg" alt="Shoe 1" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Running Shoes</h2>
+                    <h5>5.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </h5>
+                    <h5>$69.99</h5>
+                    <button onclick="add_to_cart('Sneakers', 79.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes2.jpg" alt="Shoe 2" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Elite X5</h2>
+                    <h5>4.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </h5>
+                    <h5>$59.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes3.jpg" alt="Shoe 3" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Elite X7</h2>
+                    <h5>4.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </h5>
+                    <h5>$69.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes4.jpg" alt="Shoe 4" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Sport Shoes</h2>
+                    <h5>3.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </h5>
+                    <h5>$59.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes5.jpg" alt="Shoe 5" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Sport 2 Shoes</h2>
+                    <h5>5.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </h5>
+                    <h5>$69.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes6.jpg" alt="Shoe 6" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Elite X6</h2>
+                    <h5>2.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </h5>
+                    <h5><del>$59.99</del>  $29.99</h5>  
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes7.jpg" alt="Shoe 7" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Elite X4</h2>
+                    <h5>4.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </h5>
+                    <h5>$59.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes8.jpg" alt="Shoe 8" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Running 2 Shoes</h2>
+                    <h5>5.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </h5>
+                    <h5>$69.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes9.jpg" alt="Shoe 9" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Trail Shoes</h2>
+                    <h5>5.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </h5>
+                    <h5>$69.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes10.jpg" alt="Shoe 10" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Hiking Shoes</h2>
+                    <h5>4.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </h5>
+                    <h5>$79.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes11.jpg" alt="Shoe 11" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Yoga Shoes</h2>
+                    <h5>5.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </h5>
+                    <h5>$59.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes12.jpg" alt="Shoe 12" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Gym Shoes</h2>
+                    <h5>4.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </h5>
+                    <h5>$59.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes13.jpg" alt="Shoe 13" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Basic Shoes</h2>
+                    <h5>4.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </h5>
+                    <h5>$49.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes14.jpg" alt="Shoe 14" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>4x4 Shoes</h2>
+                    <h5>4.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </h5>
+                    <h5>$69.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes15.jpg" alt="Shoe 15" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Expresso Shoes</h2>
+                    <h5>4.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </h5>
+                    <h5>$59.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes16.jpg" alt="Shoe 16" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Running 3 Shoes</h2>
+                    <h5>4.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </h5>
+                    <h5>$59.99</h5>
+                    <button>Add to Cart</button>    
+                </div>
+                <div class="product">
+                    <img src="images/shoes17.jpg" alt="Shoe 17" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Gym 2 Shoes</h2>
+                    <h5>4.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </h5>
+                    <h5>$49.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes18.jpg" alt="Shoe 18" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Classic Runner</h2>
+                    <h5>4.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </h5>
+                    <h5>$59.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes19.jpg" alt="Shoe 19" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Emerald X10</h2>
+                    <h5>4.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </h5>
+                    <h5>$99.99 (LIMITED EDITION)</h5>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/shoes20.jpg" alt="Shoe 20" onclick="openModal(this.src)">
+                    <div class="size-selection"> 
+                        <h5>Size: </h5>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">11</button>
+                    </div>
+                    <h2>Classic Edition</h2>
+                    <h5>4.0 <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </h5>
+                    <h5>$79.99</h5>
+                    <button>Add to Cart</button>
+                </div>
+            </section>
+        </main>  
 
-<body onload="update_cart_count()">
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="index.html">Generic Shoe</a>
-
-        <!-- Hamburger menu icon -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="shoes.html">Shoes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cart.html">Cart (<span id="cart-count"></span>)</a>
-                </li>
-                <li class="nav-item ">
-                    <a href="store.html" class="nav-link">Find the Store</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Main -->
-    <main>
-        <section id="featured-products">
-            <div class="product">
-                <img src="images/shoes1.jpg" alt="Shoe 1" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Running Shoes</h2>
-                <h5>5.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </h5>
-                <h5>$69.99</h5>
-                <button onclick="add_to_cart('Sneakers', 79.99)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes2.jpg" alt="Shoe 2" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Elite X5</h2>
-                <h5>4.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </h5>
-                <h5>$59.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes3.jpg" alt="Shoe 3" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Elite X7</h2>
-                <h5>4.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </h5>
-                <h5>$69.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes4.jpg" alt="Shoe 4" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Sport Shoes</h2>
-                <h5>3.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                </h5>
-                <h5>$59.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes5.jpg" alt="Shoe 5" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Sport 2 Shoes</h2>
-                <h5>5.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </h5>
-                <h5>$69.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes6.jpg" alt="Shoe 6" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Elite X6</h2>
-                <h5>2.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                </h5>
-                <h5><del>$59.99</del> $29.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes7.jpg" alt="Shoe 7" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Elite X4</h2>
-                <h5>4.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </h5>
-                <h5>$59.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes8.jpg" alt="Shoe 8" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Running 2 Shoes</h2>
-                <h5>5.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </h5>
-                <h5>$69.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes9.jpg" alt="Shoe 9" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Trail Shoes</h2>
-                <h5>5.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </h5>
-                <h5>$69.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes10.jpg" alt="Shoe 10" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Hiking Shoes</h2>
-                <h5>4.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </h5>
-                <h5>$79.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes11.jpg" alt="Shoe 11" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Yoga Shoes</h2>
-                <h5>5.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </h5>
-                <h5>$59.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes12.jpg" alt="Shoe 12" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Gym Shoes</h2>
-                <h5>4.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </h5>
-                <h5>$59.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes13.jpg" alt="Shoe 13" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Basic Shoes</h2>
-                <h5>4.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </h5>
-                <h5>$49.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes14.jpg" alt="Shoe 14" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>4x4 Shoes</h2>
-                <h5>4.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </h5>
-                <h5>$69.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes15.jpg" alt="Shoe 15" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Expresso Shoes</h2>
-                <h5>4.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </h5>
-                <h5>$59.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes16.jpg" alt="Shoe 16" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Running 3 Shoes</h2>
-                <h5>4.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </h5>
-                <h5>$59.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes17.jpg" alt="Shoe 17" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Gym 2 Shoes</h2>
-                <h5>4.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </h5>
-                <h5>$49.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes18.jpg" alt="Shoe 18" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Classic Runner</h2>
-                <h5>4.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                </h5>
-                <h5>$59.99</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes19.jpg" alt="Shoe 19" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Emerald X10</h2>
-                <h5>4.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </h5>
-                <h5>$99.99 (LIMITED EDITION)</h5>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/shoes20.jpg" alt="Shoe 20" onclick="openModal(this.src)">
-                <div class="size-selection">
-                    <h5>Size: </h5>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">10</button>
-                    <button class="size-btn">11</button>
-                </div>
-                <h2>Classic Edition</h2>
-                <h5>4.0 <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </h5>
-                <h5>$79.99</h5>
-                <button>Add to Cart</button>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="jumbotron-fluid text-center bg-dark p-5">
-        <div class="container text-white">
-            <p>&copy; Copyright 2024. All Rights Reserved.</p>
-            <p>
-                <a href="mailto:generic@shoe.net" class="text-white">generic@shoe.net</a>
-            </p>
-            <a href="https://www.facebook.com/genericshoe" target="_blank"><img src="images/fb_icon.png"
+        <!-- Footer -->
+        <footer class="jumbotron-fluid text-center bg-dark p-5">
+            <div class="container text-white">
+                <p>&copy; Copyright 2024. All Rights Reserved.</p>
+                <p>
+                    <a href="mailto:generic@shoe.net" class="text-white">generic@shoe.net</a>
+                </p>
+                <p><a href="john.html" class="text-white">By John Lopez</a></p>
+                <a href="https://www.facebook.com/genericshoe" target="_blank"><img src="images/fb_icon.png"
                     alt="black and white Facebook logo" class="pr-4" /></a>
-            <a href="https://twitter.com/genericshoe" target="_blank"><img src="images/twitter_icon.png"
-                    alt="black and white Twitter logo" /></a>
-        </div>
-    </footer>
+                <a href="https://twitter.com/genericshoe" target="_blank"><img src="images/twitter_icon.png"
+                        alt="black and white Twitter logo" /></a>
+            </div>
+        </footer>
 
-    <div id="imageModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img id="modalImage" src="" alt="Product Image">
-    </div>
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Product Image">
+        </div>
     <!-- Optional JavaScript -->
     <script>
         let cartCount = 0;
-
+    
         function add_to_cart(productName, price) {
             cartCount++;
             document.getElementById('cart-count').innerText = cartCount;
             alert(`${productName} added to cart for $${price}`);
         }
     </script>
-
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="scripts/script.js"></script>
 </body>
-
 </html>
