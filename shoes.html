@@ -20,7 +20,7 @@
     <style>
 section#featured-products {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 0%;
     max-width: 1200px;
@@ -161,75 +161,27 @@ section#featured-products {
     background-color: #555;
     transform: scale(1.15);
 }
-/*Tablet Viewport*/
-@media (max-width: 768px) {
+/* For tablets (screens between 768px and 1199px) */
+@media (max-width: 1199px) {
     section#featured-products {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
     }
-
-    .tablet-desktop {
-        display: block;
-    }
-
-    #about-map-element {
-        height: 300px;
-        width: 300px;
-    }
-
 }
 
-/*Mobile Viewport*/
+/* For mobile devices (screens up to 767px) */
+@media (max-width: 767px) {
+    section#featured-products {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    }
+}
+
+/* For very small screens (extra small mobile devices) */
 @media (max-width: 480px) {
     section#featured-products {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* 1 column for very small screens */
     }
-
-    .tablet-desktop {
-        display: none;
-    }
-
-    #about-container {
-        max-width: 1200px;
-        margin: 5px, 5px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        gap: 10px;
-        text-align: center;
-    }
-
-    #about-container h3 {
-        font-size: 3em;
-        padding: none;
-    }
-
-    #about-intro {
-        grid-column: 1;
-        grid-row: 1;
-        padding-top: 10px;
-        border: none;
-    }
-
-    #about-map {
-        grid-column: 1;
-        grid-row: 2;
-        border: none;
-    }
-
-
-
-    #about-form {
-        grid-column: 1;
-        grid-row: 3;
-        border: none;
-    }
-
-    #about-form-element {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
 }
+
 
     </style>
 
