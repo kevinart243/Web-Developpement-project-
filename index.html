@@ -18,14 +18,14 @@
         
         #hero {
             background-image: url("images/shoe_banner.jpg");
-            background-position-y: -400px;
             background-size: cover;
+            background-repeat: no-repeat;
+            height: 384px;
         }
         
         h1 {
             text-align: center;
-            color: white;
-            font-weight: bold;
+            font-weight: bolder;
         }
     </style>
 </head>
@@ -63,10 +63,53 @@
             </ul>
         </div>
     </nav>
-
+    <header>  
+        <div class="jumbotron jumbotron-fluid  " id="hero">
+         <h1 class="display-3 p-5">Generic Shoe Brand</h1>
+        </div>
+    </header>
     <main>
-        <div class="jumbotron jumbotron-fluid p-5 mt-2" id="hero">
-            <h1 class="display-4 p-5">Generic Shoe Brand</h1>
+      
+        <div class="container-fluid">
+            <h2 class="dispay-5 ">Shoe Collection</h2>
+            <div class="row">
+                <div class="col-md my-3">
+                    <div class="card d-block mx-auto" style="width: 18rem;">
+                        <img src="images/shoes1.jpg" class="card-img-top" alt="Shoe 1" >
+                        <div class="card-body">
+                            <h5 class="card-title">Running Shoes</h5>
+                            <h6 class="card-title">$69.99</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md my-3 a">
+                    <div class="card d-block mx-auto" style="width: 18rem;">
+                        <img src="images/shoes2.jpg" class="card-img-top" alt="Shoe 2" >
+                        <div class="card-body">
+                            <h5 class="card-title">Elite X5</h5>
+                            <h6 class="card-title">$59.99</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md my-3">
+                    <div class="card d-block mx-auto" style="width: 18rem;">
+                        <img src="images/shoes3.jpg" class="card-img-top" alt="Shoe 3" >
+                        <div class="card-body">
+                            <h5 class="card-title">Elite X7</h5>
+                            <h6 class="card-title">$69.99</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md my-3">
+                    <div class="card d-block mx-auto" style="width: 18rem;">
+                        <img src="images/shoes4.jpg" class="card-img-top" alt="Shoe 4" >
+                        <div class="card-body">
+                            <h5 class=" card-title">Sport Shoes</h5>
+                            <h6 class="card-title">$69.99</h6>
+                        </div>
+                    </div>
+                </div>
+             
         </div>
     </main>
 
